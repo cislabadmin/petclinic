@@ -41,17 +41,17 @@ jacocoTestReport {
         uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: 'http://18.139.23.218:8081/repository/releases/') {
+            repository(url: 'http://18.139.23.218:8081/nexus/content/repositories/releases/') {
                 authentication(userName: 'admin', password: 'admin123');
             }
-            snapshotRepository(url: 'http://18.139.23.218:8081/repository/snapshots/') {
+            snapshotRepository(url: 'http://18.139.23.218:8081/nexus/content/repositories/snapshots/') {
                 authentication(userName: 'admin', password: 'admin123');
             }
         }
     }
 }
 repositories {
-	maven { url "http://34.196.120.121:8081/nexus/content/repositories/central" }        
+	maven { url "http://18.139.23.218:8081/nexus/content/repositories/central" }        
 }
 dependencies {
     compile group: 'javax.servlet.jsp.jstl', name: 'javax.servlet.jsp.jstl-api', version:'1.2.1'
