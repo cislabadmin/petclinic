@@ -44,14 +44,14 @@ jacocoTestReport {
             repository(url: 'http://18.139.23.218:8081/nexus/content/repositories/releases/') {
                 authentication(userName: 'admin', password: 'admin123');
             }
-            snapshotRepository(url: 'http://18.139.23.218:8081/nexus/content/repositories/snapshots/') {
+            snapshotRepository(url: 'http://192.168.90.17:8081/nexus/content/repositories/snapshots/') {
                 authentication(userName: 'admin', password: 'admin123');
             }
         }
     }
 }
 repositories {
-	maven { url "http://18.139.23.218:8081/nexus/content/repositories/central" }        
+	maven { url "http://192.168.90.17:8081/nexus/content/repositories/central" }        
 }
 dependencies {
     compile group: 'javax.servlet.jsp.jstl', name: 'javax.servlet.jsp.jstl-api', version:'1.2.1'
